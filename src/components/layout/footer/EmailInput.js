@@ -1,8 +1,8 @@
 import { useFormik } from "formik";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import * as Yup from "yup";
 
-const EmailInput = (props) => {
+const EmailInput = () => {
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -30,7 +30,7 @@ const EmailInput = (props) => {
     >
       <div className="relative">
         <input
-          className="h-[56px] w-[451px] rounded-br-md rounded-tr-md border-b border-r border-t border-[#E4E4E7] pr-5 text-center text-sm leading-9 outline-none"
+          className="h-[40px] w-[320px] rounded-br-md rounded-tr-md border-b border-r border-t border-[#E4E4E7] pr-2 md:pr-5 text-center text-xs md:text-sm leading-9 outline-none md:h-[56px] md:w-[451px]"
           placeholder="برای اطلاع از جدیدترین اخبار و محصولات هوسان ایمیل خود را وارد کنید"
           name="email"
           type="email"
@@ -43,13 +43,13 @@ const EmailInput = (props) => {
         {!formik.values.email && <EmailIcon />}
       </div>
       <button
-        className="rounded-bl-md rounded-tl-md bg-spring-green px-4 py-4 text-center text-base text-white"
+        className="rounded-bl-md rounded-tl-md bg-spring-green md:px-4 py-2.5 px-1 whitespace-nowrap md:py-4 text-center text-sm md:text-base text-white"
         type="submit"
       >
         ثبت ایمیل
       </button>
       {formik.touched.email && formik.errors.email && (
-        <p className="mr-5 text-sm font-bold text-rose-400">
+        <p className="mr-5 text-xs md:text-sm font-bold text-rose-400">
           {formik.errors.email}
         </p>
       )}
@@ -60,7 +60,7 @@ const EmailInput = (props) => {
 const EmailIcon = () => {
   return (
     <svg
-      className="absolute right-7 top-4"
+      className="absolute right-7 top-4 hidden md:block"
       width="20"
       height="19"
       viewBox="0 0 20 19"

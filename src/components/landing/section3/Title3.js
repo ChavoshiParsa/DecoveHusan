@@ -1,12 +1,12 @@
 const Title3 = (props) => {
   return (
-    <div className="flex flex-col items-center justify-around space-y-5">
+    <div className="flex flex-col items-center justify-center space-y-5">
       <Icon />
-      <h3 className="relative font-yekan text-3xl font-semibold text-blue-zodiac">
+      <h3 className="relative font-yekan text-2xl font-semibold text-blue-zodiac md:text-3xl">
         <Rect />
         نحوه عملکرد دِکووی
       </h3>
-      <p className="text-center font-yekan text-xl leading-10 text-dusty-gray">
+      <p className="text-center font-yekan text-base md:text-xl leading-10 md:leading-10 text-dusty-gray px-5">
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
         از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر{" "}
       </p>
@@ -50,8 +50,8 @@ const Icon = () => {
 const Rect = () => {
   return (
     <svg
-    className="absolute -z-10 top-3"
-      width="221"
+      className="absolute top-3 -z-10"
+      width="180"
       height="17"
       viewBox="0 0 221 17"
       fill="none"

@@ -1,7 +1,7 @@
 const HelixArrowIcon = (props) => {
   return (
     <svg
-      className="absolute top-[610px]"
+      className="absolute md:top-[660px] lg:top-[610px] md:block hidden"
       width="70"
       height="93"
       viewBox="0 0 70 93"

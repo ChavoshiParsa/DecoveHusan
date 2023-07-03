@@ -4,7 +4,7 @@ import kitchen from "../../../assets/Kitchen.png";
 
 const HomeParts = () => {
   return (
-    <div className="flex h-[282px] w-[1140px] items-center justify-between">
+    <div className="flex items-center justify-center space-y-5 md:space-x-7 space-x-0 md:flex-row flex-col md:space-y-0 flex-wrap mx-3">
       <Part img={bathroom} name={"حمام - دستشویی"} />
       <Part img={livingRoom} name={"اتاق پذیرایی"} />
       <Part img={kitchen} name={"آشپزخانه"} />

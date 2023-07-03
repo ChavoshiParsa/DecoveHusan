@@ -1,7 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Pagination = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [isMd, setIsMd] = useState(window.innerWidth > 768 ? true : false);
+  useEffect(() => {
+    const handleResize = () => {
+      const windowWidth = window.innerWidth;
+      if (windowWidth <= 768) {
+        setIsMd(false);
+      } else {
+        setIsMd(true);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const leftArrowHandler = () => {
     if (currentPage !== 1) {
@@ -22,21 +38,39 @@ const Pagination = () => {
   const display = (index) => {
     index = index + 1;
     let display;
-
-    if (Math.abs(currentPage - index) >= 3) {
-      display = "hidden";
-    } else {
-      display = "flex";
-    }
-
-    if (currentPage === 1 || currentPage === 2) {
-      if (index === 4 || index === 5) {
+    if (isMd) {
+      if (Math.abs(currentPage - index) >= 3) {
+        display = "hidden";
+      } else {
         display = "flex";
       }
-    }
-    if (currentPage === 20 || currentPage === 19) {
-      if (index === 17 || index === 16) {
+
+      if (currentPage === 1 || currentPage === 2) {
+        if (index === 4 || index === 5) {
+          display = "flex";
+        }
+      }
+      if (currentPage === 20 || currentPage === 19) {
+        if (index === 17 || index === 16) {
+          display = "flex";
+        }
+      }
+    } else {
+      if (Math.abs(currentPage - index) >= 2) {
+        display = "hidden";
+      } else {
         display = "flex";
+      }
+
+      if (currentPage === 1) {
+        if (index === 3) {
+          display = "flex";
+        }
+      }
+      if (currentPage === 20) {
+        if (index === 18) {
+          display = "flex";
+        }
       }
     }
 
@@ -80,7 +114,7 @@ const Pagination = () => {
 const Button = (props) => {
   return (
     <button
-      className={`h-12 w-12 items-center justify-center rounded text-center font-yekan text-2xl font-medium ${props.generalColor} ${props.display}`}
+      className={`h-10 w-10 items-center justify-center rounded text-center font-yekan text-xl font-medium md:h-12 md:w-12 md:text-2xl ${props.generalColor} ${props.display}`}
       onClick={props.action}
     >
       {props.pageNumber}

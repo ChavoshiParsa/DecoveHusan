@@ -1,15 +1,34 @@
+import { useState } from "react";
+
 const SliderAction = (props) => {
+  const [currentSlide, setCurrentSlide] = useState(1);
+
+  const leftHandler = () => {
+    if (currentSlide < 7) {
+      setCurrentSlide(currentSlide + 1);
+    } else {
+      setCurrentSlide(1);
+    }
+  };
+  const rightHandler = () => {
+    if (currentSlide > 1) {
+      setCurrentSlide(currentSlide - 1);
+    } else {
+      setCurrentSlide(7);
+    }
+  };
+
   return (
-    <div className="absolute top-[686px] left-[1178px] flex flex-col items-end justify-between w-[112px] h-[65px]">
+    <div className="hidden flex-col items-end justify-start space-y-2 xl:flex">
       <div className="flex space-x-1">
-        <ArrowButton>
+        <ArrowButton onClick={leftHandler}>
           <LeftArrow />
         </ArrowButton>
-        <ArrowButton>
+        <ArrowButton onClick={rightHandler}>
           <RightArrow />
         </ArrowButton>
       </div>
-      <SlidePointer />
+      <SlidePointer slideNumber={currentSlide} />
     </div>
   );
 };
@@ -74,52 +93,50 @@ const LeftArrow = () => {
 
 const ArrowButton = (props) => {
   return (
-    <button className="border-[1.5px] border-white p-2.5">
+    <button
+      className="border-[1.5px] border-white p-2.5"
+      onClick={props.onClick}
+    >
       {props.children}
     </button>
   );
 };
 
 const SlidePointer = (props) => {
+  /* const pointerFunction = () => {
+    let pointer = [];
+    for (let i = 1; i <= 7; i++) {
+      if (i === props.slideNumber) {
+        pointer.push(
+          <ShapePointer className="w-[40px] bg-spring-green" />
+        );
+      } else {
+        pointer.push(
+          <ShapePointer className="w-[7px] bg-[#FFFFFF4D]" />
+        );
+      }
+    }
+    return pointer;
+  };  */
+
+  const mainClass = "bg-spring-green w-[40px]";
+  const minor = "bg-[#FFFFFF4D] w-[7px]";
+
   return (
-    <div className="flex space-x-1">
-      <Ellipse />
-      <Ellipse />
-      <Ellipse />
-      <Ellipse />
-      <Ellipse />
-      <Ellipse />
-      <Rectangle />
+    <div className="flex flex-row-reverse space-x-1 space-x-reverse">
+      <ShapePointer className={props.slideNumber === 1 ? mainClass : minor}/>
+      <ShapePointer className={props.slideNumber === 2 ? mainClass : minor}/>
+      <ShapePointer className={props.slideNumber === 3 ? mainClass : minor}/>
+      <ShapePointer className={props.slideNumber === 4 ? mainClass : minor}/>
+      <ShapePointer className={props.slideNumber === 5 ? mainClass : minor}/>
+      <ShapePointer className={props.slideNumber === 6 ? mainClass : minor}/>
+      <ShapePointer className={props.slideNumber === 7 ? mainClass : minor}/>
     </div>
   );
 };
 
-const Ellipse = (props) => {
-  return (
-    <svg
-      width="7"
-      height="7"
-      viewBox="0 0 7 7"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle cx="3.5" cy="3.5" r="3.5" fill="white" fillOpacity="0.3" />
-    </svg>
-  );
-};
-
-const Rectangle = (props) => {
-  return (
-    <svg
-      width="40"
-      height="7"
-      viewBox="0 0 40 7"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect width="40" height="7" rx="3" fill="#2BEE84" />
-    </svg>
-  );
+const ShapePointer = (props) => {
+  return <div className={`${props.className} h-[7px] rounded-full transition-colors duration-500 ease-out`}></div>;
 };
 
 export default SliderAction;

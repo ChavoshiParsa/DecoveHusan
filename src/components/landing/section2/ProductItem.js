@@ -1,13 +1,17 @@
 const ProductItem = (props) => {
   return (
     <div
-      className={`relative flex w-[280px] flex-col items-center justify-center space-y-5 border-[#E0E0E0] pb-5 font-yekan ${props.br} ${props.bb}`}
+      className={`relative flex flex-col items-center justify-center space-y-5 border-[#E0E0E0] px-1 md:px-3 lg:px-4 pb-5 font-yekan ${props.br} ${props.bb}`}
     >
       <ProductColor color={props.color} />
-      <img className="w-60 rounded-md" src={props.src} alt="Parquet" />
-      <div className="flex flex-col items-center justify-between space-y-1.5">
-        <h3 className="text-base font-bold text-blue-zodiac ">{props.name}</h3>
-        <p className="text-sm font-medium text-dusty-gray">{props.info}</p>
+      <img className="w-44 md:w-56 rounded-md lg:w-60" src={props.src} alt="Parquet" />
+      <div className="flex flex-col items-center justify-between space-y-1.5 text-center">
+        <h3 className="text-xs sm:text-sm font-bold text-blue-zodiac md:text-base ">
+          {props.name}
+        </h3>
+        <p className="text-xs font-medium text-dusty-gray md:text-sm">
+          {props.info}
+        </p>
       </div>
       <a href="/" className="text-sm font-bold text-spring-green">
         همین الان امتحان کن

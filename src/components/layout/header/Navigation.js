@@ -1,7 +1,7 @@
 const Navigation = (props) => {
   return (
-    <ul className="flex flex-row-reverse space-x-9 text-right text-white text-lg font-bold justify-center items-center font-yekan">
-      <button className="border border-spring-green rounded-[5px] w-32 h-10 text-spring-green text-base ml-9">
+    <ul className="flex flex-row-reverse items-center justify-center space-x-9 whitespace-nowrap text-right font-yekan text-lg font-bold text-white">
+      <button className="ml-9 h-10 w-32 rounded-[5px] border border-spring-green text-base text-spring-green lg:block hidden">
         نسخه ی نمایشی
       </button>
       <li className="text-spring-green">خانه</li>

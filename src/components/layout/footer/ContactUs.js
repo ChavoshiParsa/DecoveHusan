@@ -1,17 +1,17 @@
 const ContactUs = (props) => {
   return (
-    <div className="flex flex-col items-end justify-between space-y-3 font-yekan text-white">
-      <h2 className="text-xl font-bold">ارتباط با ما</h2>
-      <ul className="w-[400px] space-y-2.5 text-right">
+    <div className="flex flex-col items-center md:items-end justify-between space-y-3 font-yekan text-white">
+      <h2 className="text-lg lg:text-xl font-bold">ارتباط با ما</h2>
+      <ul className="w-[300px] lg:w-[400px] space-y-1.5 lg:space-y-2.5 text-center md:text-right">
         <li className="flex items-center justify-between">
-          <p className="text-base font-medium text-white">info@husanco.ir</p>
+          <p className="text-sm lg:text-base font-medium text-white">info@husanco.ir</p>
           <a href="/" className="ml-auto">
             :ایمیل
           </a>
           <DiscIcon />
         </li>
         <li className="flex items-center justify-between">
-          <p className="text-base font-medium text-white">
+          <p className="text-sm lg:text-base font-medium text-white">
             ۰۴۱۳-۳۸۳۰۷۲۸ - ۰۹۱۲۷۹۸۳۵۶۹
           </p>
           <a href="/" className="ml-auto">
@@ -20,7 +20,7 @@ const ContactUs = (props) => {
           <DiscIcon />
         </li>
         <li className="flex items-center justify-between">
-          <p className="text-base font-medium text-white">
+          <p className="text-sm lg:text-base font-medium text-white">
             تبریز - خ ۲۹ بهمن - دانشگاه تبریز - مرکز رشد
           </p>
           <a href="/" className="ml-auto">
@@ -36,7 +36,7 @@ const ContactUs = (props) => {
 const DiscIcon = () => {
   return (
     <svg
-      className="ml-2"
+      className="ml-1.5 lg:ml-2"
       width="7"
       height="7"
       viewBox="0 0 7 7"

@@ -2,11 +2,11 @@ const Title2 = () => {
   return (
     <div className="flex flex-col items-center justify-around space-y-5">
       <Icon />
-      <h3 className="relative font-yekan text-3xl font-bold text-blue-zodiac">
+      <h3 className="relative font-yekan text-[26px] md:text-3xl font-bold text-blue-zodiac">
         <Rect />
         لیست محصولات
       </h3>
-      <p className="text-center font-yekan text-xl leading-10 text-dusty-gray">
+      <p className="text-center font-yekan text-base mx-6 md:text-xl leading-10 text-dusty-gray">
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
         از طراحان گرافیک است
       </p>
@@ -57,9 +57,8 @@ const Icon = (props) => {
 const Rect = () => {
   return (
     <svg
-      className="absolute left-1.5 top-3 -z-30"
-      width="169"
-      height="17"
+      className="absolute left-1.5 top-3 -z-30 w-[169px]"
+      height="16"
       viewBox="0 0 169 17"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -5,7 +5,7 @@ import ProductGrid from "./ProductsGrid";
 
 const Section2 = (props) => {
   return (
-    <section className="relative flex w-full flex-col items-center justify-center border-t border-t-[#E0E0E0] space-y-16 mb-32">
+    <section className="relative flex flex-col items-center justify-center space-y-12 mb-24 md:space-y-16">
       <DotPattern />
       <Description2 />
       <ProductGrid />

@@ -4,7 +4,7 @@ import Title1 from "./Title1";
 
 const Section1 = (props) => {
   return (
-    <section className="relative mt-24 flex flex-col items-center justify-center space-y-14 mb-24">
+    <section className="relative mb-28 mt-10 flex flex-col items-center justify-center space-y-16 border-b border-b-[#E0E0E0] pb-28 md:mt-8 ">
       <StairPattern />
       <Title1 />
       <HomeParts />

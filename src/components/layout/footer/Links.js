@@ -1,7 +1,7 @@
 const Links = (props) => {
   return (
-    <div className="flex flex-col items-end justify-between space-y-3 font-yekan text-white">
-      <h2 className="text-xl font-bold">بخش های سایت</h2>
+    <div className="hidden flex-col items-end justify-between space-y-3 font-yekan text-white xl:flex">
+      <h2 className="text-xl font-bold text-right whitespace-nowrap">بخش های سایت</h2>
       <ul className="space-y-2.5 text-right">
         <li className="flex items-center justify-end">
           <a href="/">خدمات ما</a>

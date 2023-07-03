@@ -1,6 +1,7 @@
 const Logo = (props) => {
   return (
     <svg
+    className="hidden lg:block"
       width="46"
       height="46"
       viewBox="0 0 46 46"

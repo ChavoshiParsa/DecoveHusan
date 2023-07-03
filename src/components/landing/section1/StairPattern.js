@@ -1,7 +1,7 @@
 const StairPattern = (props) => {
   return (
     <svg
-      className="absolute right-0 -top-[105px] -z-50"
+      className="absolute right-0 -top-16 md:-top-20 -z-50"
       width="670"
       height="670"
       viewBox="0 0 670 670"

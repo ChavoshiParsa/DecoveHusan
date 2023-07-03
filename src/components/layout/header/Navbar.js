@@ -3,7 +3,7 @@ import Navigation from "./Navigation";
 
 const Navbar = (props) => {
   return (
-    <nav className="flex h-28 items-center justify-between px-20">
+    <nav className="hidden items-center justify-center py-12 md:flex lg:space-x-[125px] xl:space-x-[310px]">
       <Logo />
       <Navigation />
     </nav>

@@ -1,7 +1,7 @@
 const DotPattern = () => {
   return (
     <svg
-    className="absolute top-20 left-0"
+      className="absolute left-0 -top-5 -z-40"
       width="170"
       height="185"
       viewBox="0 0 170 185"
@@ -210,7 +210,7 @@ const DotPattern = () => {
       />
       <path
         d="M35.2129 169C37.422 169 39.2129 167.209 39.2129 165C39.2129 162.791 37.422 161 35.2129 161C33.0038 161 31.2129 162.791 31.2129 165C31.2129 167.209 33.0038 169 35.2129 169Z"
-        fill="#FFEF9F" 
+        fill="#FFEF9F"
       />
       <path
         d="M58.2129 169C60.422 169 62.2129 167.209 62.2129 165C62.2129 162.791 60.422 161 58.2129 161C56.0037 161 54.2129 162.791 54.2129 165C54.2129 167.209 56.0037 169 58.2129 169Z"
@@ -233,7 +233,7 @@ const DotPattern = () => {
         fill="#FFEF9F"
       />
     </svg>
-  ) ;
+  );
 };
 
 export default DotPattern;

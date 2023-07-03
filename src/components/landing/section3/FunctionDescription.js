@@ -2,7 +2,7 @@ import StepItem from "./StepItem";
 
 const FunctionDescription = () => {
   return (
-    <div className="flex flex-row-reverse items-center justify-between">
+    <div className="hidden flex-row-reverse items-center justify-between lg:flex">
       <StartArrow />
       <StepItem number=".۰۱" text=".یک عکس از اتاق خود آپلود کنید">
         <Step1Icon />

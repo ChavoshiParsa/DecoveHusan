@@ -1,6 +1,6 @@
 const ForProducers = (props) => {
   return (
-    <div className="flex items-center justify-between space-x-16">
+    <div className="mx-16 flex flex-col items-center justify-between space-y-8 md:flex-row md:space-x-16 md:space-y-0">
       <Icon />
       <Box />
     </div>
@@ -10,6 +10,7 @@ const ForProducers = (props) => {
 const Icon = () => {
   return (
     <svg
+      className="h-[250px] w-[380px] md:h-[450px] md:w-[450px]"
       width="500"
       height="334"
       viewBox="0 0 500 334"
@@ -1161,15 +1162,15 @@ const Icon = () => {
 
 const Box = () => {
   return (
-    <div className="flex h-[310px] w-[570px] flex-col items-end justify-center space-y-4 rounded-xl bg-[#FAFAFA] pr-8 font-yekan">
-      <h2 className="text-right text-3xl font-bold text-blue-zodiac">
+    <div className="flex flex-col items-center max-w-[575px]  md:items-end justify-center space-y-4 rounded-xl bg-[#FAFAFA] p-7 text-center font-yekan md:text-right lg:p-9">
+      <h2 className="text-2xl font-bold text-blue-zodiac lg:text-3xl">
         برای تولید کنندگان
       </h2>
-      <p className="text-right text-xl leading-10 text-dusty-gray">
+      <p className="text-lg leading-10 text-dusty-gray lg:text-xl lg:leading-10">
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
         از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون
       </p>
-      <button className="h-[53px] w-[127px] rounded-[5px] bg-spring-green text-lg font-bold text-white">
+      <button className="h-[50px] w-[127px] rounded-[5px] bg-spring-green text-base font-bold text-white lg:h-[53px] lg:text-lg">
         ثبت درخواست
       </button>
     </div>

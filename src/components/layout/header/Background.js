@@ -3,7 +3,7 @@ import backgroundImage from "../../../assets/Background.png";
 const Background = (props) => {
   return (
     <img
-      className="absolute w-screen -z-50"
+      className="absolute -z-50 object-top h-[750px] w-full object-none"
       src={backgroundImage}
       alt="Background"
     />

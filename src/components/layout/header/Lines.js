@@ -1,6 +1,6 @@
 const Lines = (props) => {
   return (
-    <div className="absolute -z-40 w-full flex flex-row justify-between items-center">
+    <div className="absolute -z-40 w-full flex-row justify-between items-center hidden md:flex">
       <Line />
       <Line />
       <Line />

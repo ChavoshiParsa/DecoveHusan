@@ -1,12 +1,12 @@
 const Title1 = (props) => {
   return (
-    <div className="flex h-[327px] w-[1140px] flex-col items-center justify-between">
+    <div className="flex flex-col items-center justify-between">
       <Icon />
-      <h3 className="relative font-yekan text-3xl font-bold text-blue-zodiac">
+      <h3 className="relative mb-4 font-yekan text-[26px] font-bold text-blue-zodiac md:mb-6 md:text-3xl">
         <Rect />
         خدمات واقعیت مجازی
       </h3>
-      <p className="text-center font-yekan text-xl leading-10 text-dusty-gray">
+      <p className="mx-5 text-center font-yekan text-base leading-8 text-dusty-gray md:mx-36 md:text-xl md:leading-10">
         این سامانه بر اساس خدمات موجود دسته بندی خواهد شد. برای مثال اگر شخصی
         بخواهد برای اتاق خواب یا دیگر بخش های ساختمان خود، کفپوشی انتخاب کند،
         ابتدا وارد دسته بندی کفپوش شده و از آنجا زیردسته خود را انتخاب کرده و در
@@ -62,8 +62,7 @@ const Icon = (props) => {
 const Rect = () => {
   return (
     <svg
-      className="absolute left-1 top-4 -z-30"
-      width="235"
+      className="absolute left-1 top-4 -z-30 w-[204px] md:w-[235px]"
       height="17"
       viewBox="0 0 235 17"
       fill="none"
