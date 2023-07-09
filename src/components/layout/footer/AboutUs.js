@@ -1,15 +1,15 @@
 const AboutUs = (props) => {
   return (
-    <div className="flex w-[360px] h-[165px] lg:w-[505px] md:space-y-1 space-y-3 lg:h-[186px] flex-col items-center md:items-end justify-between text-center md:text-right font-yekan">
+    <div className="flex md:h-[165px] w-[360px] flex-col items-center justify-between space-y-0 text-center font-yekan md:items-end md:space-y-1 md:text-right lg:h-[186px] lg:w-[505px]">
       <div className="flex items-center justify-center">
         <Logo />
         <AboutIcon />
       </div>
-      <p className="text-base lg:text-lg font-medium leading-10 text-white">
+      <p className="text-base font-medium leading-10 text-white lg:text-lg md:block hidden">
         این شرکت از سال هزار و سیصدو نود ونه بطور رسمی فعالیت خود را در حوزه
         فناوری اطلاعات، هوش مصنوعی و مهندسی نرم افزارآغار کرده است
       </p>
-      <a href="/" className="text-base lg:text-lg font-bold text-spring-green">
+      <a href="/" className="text-base font-bold text-spring-green lg:text-lg md:block hidden">
         مشاهده اطلاعات بیشتر
       </a>
     </div>

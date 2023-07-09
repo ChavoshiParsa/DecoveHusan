@@ -5,8 +5,8 @@ import Links from "./Links";
 
 const Footer = (props) => {
   return (
-    <footer className="flex h-[630px] md:h-[504px] flex-col items-center md:items-end justify-between bg-blue-zodiac pb-[100px] pt-[45px] md:pt-[70px] md:pr-6 lg:pr-8 xl:pr-14">
-      <div className="mb-12 flex flex-col-reverse items-center justify-end space-x-0 space-y-20 space-y-reverse md:mb-0 md:flex-row md:space-x-8 md:space-y-0 lg:space-x-20 xl:space-x-24">
+    <footer className="flex h-[420px] md:space-y-10 md:h-[450px] flex-col items-center md:items-end justify-between bg-blue-zodiac pb-[100px] pt-[45px] md:pt-[70px] md:pr-6 lg:pr-8 xl:pr-14">
+      <div className="mb-12 flex flex-col-reverse items-center justify-end space-x-0 space-y-reverse md:mb-0 md:flex-row md:space-x-8 space-y-0 lg:space-x-20 xl:space-x-24">
         <ContactUs />
         <Links />
         <AboutUs />

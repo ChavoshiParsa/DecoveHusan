@@ -13,6 +13,7 @@ module.exports = {
         dusty: {
           gray: "rgba(152, 152, 152, 1)",
         },
+        pomegranate: "rgba(238, 43, 43, 1)",
       },
       fontFamily: {
         yekan: ["Yekan Bakh"],

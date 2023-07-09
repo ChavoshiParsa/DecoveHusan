@@ -13,7 +13,7 @@ const Header = (props) => {
     >
       <Background />
       <Lines />
-      <Navbar />
+      <Navbar type="main"/>
       <BottomNavbar />
       <div className="mx-5 mt-14 flex flex-col-reverse items-center justify-center space-y-12 space-y-reverse md:mx-10 md:mt-[60px] md:flex-row md:items-start md:space-x-20 ">
         <Phone />

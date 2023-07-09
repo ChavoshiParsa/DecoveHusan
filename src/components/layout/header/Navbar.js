@@ -3,9 +3,13 @@ import Navigation from "./Navigation";
 
 const Navbar = (props) => {
   return (
-    <nav className="hidden items-center justify-center py-12 md:flex lg:space-x-[125px] xl:space-x-[310px]">
+    <nav
+      className={`${
+        !props.type ? "bg-white" : "mb-12"
+      } hidden items-center justify-center py-6 drop-shadow-md md:flex lg:space-x-[125px] xl:space-x-[310px]`}
+    >
       <Logo />
-      <Navigation />
+      <Navigation type={props.type} demoButton={props.demoButton} />
     </nav>
   );
 };

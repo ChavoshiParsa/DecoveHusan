@@ -9,10 +9,10 @@ const ProductGrid = () => {
   let cols = 4;
   let size = 12;
   const windowWidth = window.innerWidth;
-  if (windowWidth <= 768) {
+  if (windowWidth <= 767) {
     cols = 2;
     size = 8;
-  } else if (768 < windowWidth && windowWidth <= 1280) {
+  } else if (767 < windowWidth && windowWidth <= 1280) {
     cols = 3;
     size = 9;
   }
@@ -27,10 +27,10 @@ const ProductGrid = () => {
   useEffect(() => {
     const handleResize = () => {
       const windowWidth = window.innerWidth;
-      if (windowWidth <= 768) {
+      if (windowWidth <= 767) {
         setGridCols(2);
         setReducedSize(8);
-      } else if (768 < windowWidth && windowWidth <= 1280) {
+      } else if (767 < windowWidth && windowWidth <= 1280) {
         setGridCols(3);
         setReducedSize(9);
       } else {
@@ -49,7 +49,7 @@ const ProductGrid = () => {
     <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
       {resizeArray(productData, reducedSize).map((item, index) => (
         <ProductItem
-          src={imp(index + 1)}
+          src={imp(`products/Product (${index + 1}).png`)}
           id={item.id}
           key={item.id}
           name={item.name}

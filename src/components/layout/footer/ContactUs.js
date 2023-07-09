@@ -1,31 +1,27 @@
 const ContactUs = (props) => {
   return (
-    <div className="flex flex-col items-center md:items-end justify-between space-y-3 font-yekan text-white">
-      <h2 className="text-lg lg:text-xl font-bold">ارتباط با ما</h2>
-      <ul className="w-[300px] lg:w-[400px] space-y-1.5 lg:space-y-2.5 text-center md:text-right">
+    <div className="flex flex-col items-center justify-between space-y-3 font-yekan text-white md:items-end">
+      <h2 className="text-lg font-bold lg:text-xl">ارتباط با ما</h2>
+      <ul className="w-[300px] space-y-1.5 text-center md:text-right lg:w-[400px] lg:space-y-2.5">
         <li className="flex items-center justify-between">
-          <p className="text-sm lg:text-base font-medium text-white">info@husanco.ir</p>
-          <a href="/" className="ml-auto">
-            :ایمیل
-          </a>
+          <p className="text-sm font-medium text-white lg:text-base">
+            info@husanco.ir
+          </p>
+          <p className="ml-auto">:ایمیل</p>
           <DiscIcon />
         </li>
         <li className="flex items-center justify-between">
-          <p className="text-sm lg:text-base font-medium text-white">
+          <p className="text-sm font-medium text-white lg:text-base">
             ۰۴۱۳-۳۸۳۰۷۲۸ - ۰۹۱۲۷۹۸۳۵۶۹
           </p>
-          <a href="/" className="ml-auto">
-            :تلفن
-          </a>
+          <p className="ml-auto">:تلفن</p>
           <DiscIcon />
         </li>
         <li className="flex items-center justify-between">
-          <p className="text-sm lg:text-base font-medium text-white">
+          <p className="text-sm font-medium text-white lg:text-base">
             تبریز - خ ۲۹ بهمن - دانشگاه تبریز - مرکز رشد
           </p>
-          <a href="/" className="ml-auto">
-            :آدرس
-          </a>
+          <p className="ml-auto">:آدرس</p>
           <DiscIcon />
         </li>
       </ul>
